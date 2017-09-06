@@ -25,3 +25,5 @@ The [xmlBLASTparser](https://github.com/AshokHub/xmlBLASTparser) is a lightweigh
 | **tpd**&#124;*coll-accession*&#124;*name*              | Third party annotation&#44; DDBJ                           |
 | **tpe**&#124;*coll-accession*&#124;*name*              | Third party annotation&#44; EMBL                           |
 | **tpg**&#124;*coll-accession*&#124;*name*              | Third party annotation&#44; GenBank                        |
+
+&#42;The NCBI has discontinued support for &ldquo;oth&rdquo; identifiers, but support for them is maintained in **xdformat/xdget**.
