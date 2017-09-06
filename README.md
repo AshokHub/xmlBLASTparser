@@ -27,3 +27,6 @@
 | **tpg**&#124;*coll-accession*&#124;*name*              | Third party annotation, GenBank                            |
 
 &#42;The NCBI has discontinued support for "oth" identifiers, but support for them is maintained in **xdformat/xdget**.
+
+# [Usage]
+[xmlBLASTparser](https://github.com/AshokHub/xmlBLASTparser) is 
