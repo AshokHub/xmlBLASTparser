@@ -10,7 +10,7 @@ The [xmlBLASTparser](https://github.com/AshokHub/xmlBLASTparser) is a lightweigh
 | **dbj**&#124;*coll-accession*&#124;*locus*             | DNA Database of Japan                                      |
 | **emb**&#124;*coll-accession*&#124;*entry*             | EBI EMBL Database                                          |
 | **gb**&#124;*coll-accession*&#124;*locus*              | NCBI GenBank database                                      |
-| **gi**&#124;*integer*                                  | NCBI GenInfo Integrated Database (&ldquo;*jee-aye*&rdquo;) |
+| **gi**&#124;*integer*                                  | NCBI GenInfo Integrated Database ("*jee-aye*")             |
 | **gim**&#124;*integer*                                 | NCBI GenInfo Import identifier                             |
 | **gnl**&#124;*database*&#124;*idstring*                | General (user-definable) database and identifier           |
 | **gp**&#124;*coll-accession*&#124;*locus_cds#*         | GenPept (GenBank protein) identifier                       |
@@ -22,8 +22,8 @@ The [xmlBLASTparser](https://github.com/AshokHub/xmlBLASTparser) is a lightweigh
 | **prf**&#124;*accession*&#124;*name*                   | Protein Research Foundation                                |
 | **ref**&#124;*coll-accession*&#124;*locus*             | NCBI RefSeq                                                |
 | **sp**&#124;*coll-accession*&#124;*locus*              | SWISS-PROT database                                        |
-| **tpd**&#124;*coll-accession*&#124;*name*              | Third party annotation&#44; DDBJ                           |
-| **tpe**&#124;*coll-accession*&#124;*name*              | Third party annotation&#44; EMBL                           |
-| **tpg**&#124;*coll-accession*&#124;*name*              | Third party annotation&#44; GenBank                        |
+| **tpd**&#124;*coll-accession*&#124;*name*              | Third party annotation, DDBJ                               |
+| **tpe**&#124;*coll-accession*&#124;*name*              | Third party annotation, EMBL                               |
+| **tpg**&#124;*coll-accession*&#124;*name*              | Third party annotation, GenBank                            |
 
-&#42;The NCBI has discontinued support for &ldquo;oth&rdquo; identifiers, but support for them is maintained in **xdformat/xdget**.
+&#42;The NCBI has discontinued support for "oth" identifiers, but support for them is maintained in **xdformat/xdget**.
