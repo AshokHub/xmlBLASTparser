@@ -30,3 +30,10 @@
 
 # Usage
 [xmlBLASTparser](https://github.com/AshokHub/xmlBLASTparser) is 
+
+# Support
+Please feel free to sent your queries, suggestions and/or comments related to [xmlBLASTparser](https://github.com/AshokHub/xmlBLASTparser) program to [ashok.bioinformatics@gmail.com](ashok.bioinformatics@gmail.com) or [ashok@biogem.org](ashok@biogem.org).
+
+
+# License
+[xmlBLASTparser](https://github.com/AshokHub/xmlBLASTparser) is made available under version 3 of the GNU Lesser General Public License.
