@@ -37,13 +37,13 @@
 $xml = simplexml_load_file("V07E2YXG014-Alignment.xml") or die("Error: Cannot able to create object");
 ```
 
-2. [NCBI BLAST URL API](https://ncbi.github.io/blast-cloud/dev/api.html) - The XML file format content can be retrieved through PHP using NCBI BLAST URL API method. BLASTphp library is a PHP wrapper for the NCBI BLAST URL API used to stream the content of [NCBI BLAST URL API](https://ncbi.github.io/blast-cloud/dev/api.html) sequence alignment result into an XML file format. For example,
+2. [NCBI BLAST URL API](https://ncbi.github.io/blast-cloud/dev/api.html) - The XML file format content can be retrieved through PHP using NCBI BLAST URL API method. BLASTphp library is a PHP wrapper for the [NCBI BLAST URL API](https://ncbi.github.io/blast-cloud/dev/api.html) used to stream the content of [NCBI BLAST](https://blast.ncbi.nlm.nih.gov/Blast.cgi) sequence alignment result into an XML file format. For example,
 
 ```php
 $xml = file_get_contents("https://blast.ncbi.nlm.nih.gov/blast/Blast.cgi?CMD=Get&FORMAT_TYPE=XML&RID=$rid");
 ```
 
-3. [Standalone NCBI BLAST](https://blast.ncbi.nlm.nih.gov/Blast.cgi?PAGE_TYPE=BlastDocs&DOC_TYPE=Download) - The XML file format output of the sequence alignment result can be obtained by executing the standalone executable programs of NCBI BLAST and loaded into the [xmlBLASTparser](https://github.com/AshokHub/xmlBLASTparser) PHP file. For example,
+3. [Standalone NCBI BLAST](https://blast.ncbi.nlm.nih.gov/Blast.cgi?PAGE_TYPE=BlastDocs&DOC_TYPE=Download) - The XML file format output of the sequence alignment result can be obtained by executing the standalone executable programs (blastn.exe, blastp.exe, blastx.exe, tblastn.exe, tblastx.exe, etc.)of NCBI BLAST and loaded into the [xmlBLASTparser](https://github.com/AshokHub/xmlBLASTparser) PHP file. For example,
 
 ```php
 exec('blastp.exe -db pdb -query seq.fa -remote -outfmt 5 -out out.xml');
