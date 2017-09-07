@@ -1,4 +1,4 @@
-![xmlBLASTparser](https://raw.githubusercontent.com/AshokHub/xmlBLASTparser/master/misc/xmlBLASTparser_logo_500x125.png)
+![xmlBLASTparser](https://raw.githubusercontent.com/AshokHub/xmlBLASTparser/master/misc/xmlBLASTparser_logo.png)
 
 # About
 [xmlBLASTparser](https://github.com/AshokHub/xmlBLASTparser) is a lightweight PHP library for parsing an XML formatted [NCBI BLAST](https://blast.ncbi.nlm.nih.gov/Blast.cgi) output and rendering into a colorful HTML page. The database accession number/id in the webpage is properly hyperlinked to the external source database. Moreover, the description summary in the webpage is hyperlinked with anchor link to the corresponding alignment section. The complete list of [NCBI](https://www.ncbi.nlm.nih.gov) standard sequence identifiers are tabulated below:
