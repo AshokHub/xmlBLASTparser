@@ -29,13 +29,13 @@
 &#42;The NCBI has discontinued support for "oth" identifiers, but support for them is maintained in **xdformat/xdget**.
 
 # Usage
-[xmlBLASTparser](https://github.com/AshokHub/xmlBLASTparser) can be used to parse XML output of the [NCBI BLAST](https://blast.ncbi.nlm.nih.gov/Blast.cgi) sequence alignment result extracted through any one of the following methods:
+[xmlBLASTparser](https://github.com/AshokHub/xmlBLASTparser) can be used to parse XML file format output of the [NCBI BLAST](https://blast.ncbi.nlm.nih.gov/Blast.cgi) sequence alignment result obtained through any one of the following methods:
 
-1. [NCBI BLAST](https://blast.ncbi.nlm.nih.gov/Blast.cgi)- The XML output of the sequence alignment can be obtained after 
+1. [NCBI BLAST](https://blast.ncbi.nlm.nih.gov/Blast.cgi) - The XML file format output of the sequence alignment can be downloaded from the [NCBI BLAST](https://blast.ncbi.nlm.nih.gov/Blast.cgi) from the result page and loaded into the [xmlBLASTparser](https://github.com/AshokHub/xmlBLASTparser) PHP file. For example, ```php $xml = simplexml_load_file("V07E2YXG014-Alignment.xml") or die("Error: Cannot able to create object");```.
 
-2. [NCBI BLAST URL API](https://ncbi.github.io/blast-cloud/dev/api.html) - The xxx
+2. [NCBI BLAST URL API](https://ncbi.github.io/blast-cloud/dev/api.html) - The XML file format content can be retrieved through PHP using NCBI BLAST URL API method. BLASTphp library is a PHP wrapper for the NCBI BLAST URL API used to stream the content of [NCBI BLAST URL API](https://ncbi.github.io/blast-cloud/dev/api.html) sequence alignment result into an XML file format. For example, ```php $xml = file_get_contents("https://blast.ncbi.nlm.nih.gov/blast/Blast.cgi?CMD=Get&FORMAT_TYPE=XML&RID=$rid");```.
 
-3. Standalone NCBI BLAST - 
+3. [Standalone NCBI BLAST](ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/) - The XML file format output of the sequence alignment result can be obtained by executing the standalone executable programs of NCBI BLAST and loaded into the [xmlBLASTparser](https://github.com/AshokHub/xmlBLASTparser) PHP file. For example, ```php exec('blastp.exe -db pdb -query seq.fa -remote -outfmt 5 -out out.xml'); $xml = file_get_contents("out.xml");```.
 
 # Support
 Please feel free to sent your queries, suggestions and/or comments related to [xmlBLASTparser](https://github.com/AshokHub/xmlBLASTparser) program to [ashok.bioinformatics@gmail.com](ashok.bioinformatics@gmail.com) or [ashok@biogem.org](ashok@biogem.org).
