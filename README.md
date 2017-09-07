@@ -45,6 +45,8 @@ $xml = file_get_contents("https://blast.ncbi.nlm.nih.gov/blast/Blast.cgi?CMD=Get
 
 3. [Standalone NCBI BLAST](https://blast.ncbi.nlm.nih.gov/Blast.cgi?PAGE_TYPE=BlastDocs&DOC_TYPE=Download) - The XML file format output of the sequence alignment result can be obtained by executing the [standalone NCBI BLAST](https://blast.ncbi.nlm.nih.gov/Blast.cgi?PAGE_TYPE=BlastDocs&DOC_TYPE=Download) executable programs such as blastn.exe, blastp.exe, blastx.exe, tblastn.exe, tblastx.exe, etc. and loaded into the [xmlBLASTparser](https://github.com/AshokHub/xmlBLASTparser) PHP file. For example,
 
+# Input
+
 ```php
 <?xml version="1.0"?>
 <!DOCTYPE BlastOutput PUBLIC "-//NCBI//NCBI BlastOutput/EN" "http://www.ncbi.nlm.nih.gov/dtd/NCBI_BlastOutput.dtd">
@@ -171,12 +173,6 @@ $xml = file_get_contents("https://blast.ncbi.nlm.nih.gov/blast/Blast.cgi?CMD=Get
 </Iteration>
 </BlastOutput_iterations>
 </BlastOutput>
-```
-
-# Input
-```xml
-exec('blastp.exe -db pdb -query seq.fa -remote -outfmt 5 -out out.xml');
-$xml = file_get_contents("out.xml");
 ```
 
 # Output
