@@ -37,7 +37,7 @@
 $xml = simplexml_load_file("V07E2YXG014-Alignment.xml") or die("Error: Cannot able to create object");
 ```
 
-* [NCBI BLAST URL API](https://ncbi.github.io/blast-cloud/dev/api.html) - The XML file format content can be retrieved through PHP using NCBI BLAST URL API method. BLASTphp library is a PHP wrapper for the [NCBI BLAST URL API](https://ncbi.github.io/blast-cloud/dev/api.html) used to stream the content of [NCBI BLAST](https://blast.ncbi.nlm.nih.gov/Blast.cgi) sequence alignment result into an XML file format. For example,
+* [NCBI BLAST URL API](https://ncbi.github.io/blast-cloud/dev/api.html) - The XML file format content can be retrieved through PHP using NCBI BLAST URL API method. [BLASTphp](https://github.com/AshokHub/BLASTphp) library is a PHP wrapper for the [NCBI BLAST URL API](https://ncbi.github.io/blast-cloud/dev/api.html) used to stream the content of [NCBI BLAST](https://blast.ncbi.nlm.nih.gov/Blast.cgi) sequence alignment result into an XML file format. For example,
 
 ```php
 $xml = file_get_contents("https://blast.ncbi.nlm.nih.gov/blast/Blast.cgi?CMD=Get&FORMAT_TYPE=XML&RID=$rid");
