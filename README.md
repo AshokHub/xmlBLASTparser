@@ -1,7 +1,7 @@
 ![xmlBLASTparser](https://raw.githubusercontent.com/AshokHub/xmlBLASTparser/master/misc/xmlBLASTparser_logo_500x125.png)
 
 # About
-[xmlBLASTparser](https://github.com/AshokHub/xmlBLASTparser) is a lightweight PHP library for parsing an XML formatted BLAST output into a colorful HTML page. The database accession number/id in the webpage is properly hyperlinked to the external source database. Moreover, the description summary in the webpage is hyperlinked with anchor link to the corresponding alignment section. The complete list of NCBI standard sequence identifiers are tabulated below:
+[xmlBLASTparser](https://github.com/AshokHub/xmlBLASTparser) is a lightweight PHP library for parsing an XML formatted [NCBI BLAST](https://blast.ncbi.nlm.nih.gov/Blast.cgi) output and rendering into a colorful HTML page. The database accession number/id in the webpage is properly hyperlinked to the external source database. Moreover, the description summary in the webpage is hyperlinked with anchor link to the corresponding alignment section. The complete list of [NCBI](https://www.ncbi.nlm.nih.gov) standard sequence identifiers are tabulated below:
 
 | **Tag and Identifier Syntax**                          | **Identifier Source Description**                          |
 |--------------------------------------------------------|------------------------------------------------------------|
@@ -29,7 +29,13 @@
 &#42;The NCBI has discontinued support for "oth" identifiers, but support for them is maintained in **xdformat/xdget**.
 
 # Usage
-[xmlBLASTparser](https://github.com/AshokHub/xmlBLASTparser) is 
+[xmlBLASTparser](https://github.com/AshokHub/xmlBLASTparser) can be used to parse XML output of the [NCBI BLAST](https://blast.ncbi.nlm.nih.gov/Blast.cgi) sequence alignment result extracted through any one of the following methods:
+
+1. [NCBI BLAST](https://blast.ncbi.nlm.nih.gov/Blast.cgi)- The XML output of the sequence alignment can be obtained after 
+
+2. [NCBI BLAST URL API](https://ncbi.github.io/blast-cloud/dev/api.html) - The xxx
+
+3. Standalone NCBI BLAST - 
 
 # Support
 Please feel free to sent your queries, suggestions and/or comments related to [xmlBLASTparser](https://github.com/AshokHub/xmlBLASTparser) program to [ashok.bioinformatics@gmail.com](ashok.bioinformatics@gmail.com) or [ashok@biogem.org](ashok@biogem.org).
