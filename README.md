@@ -50,6 +50,9 @@ exec('blastp.exe -db pdb -query seq.fa -remote -outfmt 5 -out out.xml');
 $xml = file_get_contents("out.xml");
 ```
 
+# Output
+![xmlBLASTparser Output](https://raw.githubusercontent.com/AshokHub/xmlBLASTparser/master/misc/output.jpg)
+
 # Support
 Please feel free to sent your queries, suggestions and/or comments related to [xmlBLASTparser](https://github.com/AshokHub/xmlBLASTparser) program to [ashok.bioinformatics@gmail.com](ashok.bioinformatics@gmail.com) or [ashok@biogem.org](ashok@biogem.org).
 
