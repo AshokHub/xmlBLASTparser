@@ -20,12 +20,14 @@
 	table#statistics { width: 300px; }
 	table#statistics td { border: 1px solid Coral; padding: 2px; }
 	table#statistics td:nth-child(odd) { color: white; background: Chocolate; }
-	#ops { padding: 0.1px 0 0.1px 0; }
+	#ops { padding: 0.1px 0 0.1px 0; font-family: "Lucida Console", Monaco, monospace; -ms-word-break: break-all; word-break: break-all; word-break: break-word; }
 	#ilnk { text-decoration: none; }
+	#blout { font-family: monospace; }
+	#algfmt { line-height: 130%; }
 	</style>
 </head>
 <body>
-<kbd>
+<div id="blout">
 <?php
 $xml = simplexml_load_file("V07E2YXG014-Alignment.xml") or die("Error: Cannot able to create object");
 function def_split($x, $y) {
@@ -235,7 +237,7 @@ foreach($xml->BlastOutput_iterations->Iteration as $itr) {
 				<tr><th><?php print "Hit Number: " . $Hit_num . ", Accession Number: <span id='" . $Hit_accession . "'>" . $Hit_accession; ?></span></th></tr>
 				<tr><td><?php $sdef = def_split($Hit_id, $Hit_def); print annotate($sdef); ?></td></tr>
 				<tr><td><?php print "Length = ". $Hit_len . ", Score =  " . (int)$Hsp_bit_score . " bits (" . $Hsp_score . "), Expect = " . $Hsp_evalue . ",<br>Identities = " . $Hsp_identity . "/" . $Hsp_align_len . " (" . (int)(($Hsp_identity/$Hsp_align_len)*100) . "%), Positives = " . $Hsp_positive . "/" . $Hsp_align_len . " (" . (int)(($Hsp_positive/$Hsp_align_len)*100) . "%), Gaps = ". $Hsp_gaps . "/" . $Hsp_align_len . " (" . (int)(($Hsp_gaps/$Hsp_align_len)*100) . "%)"; ?></td></tr>
-				<tr><td><pre><?php fmtprint($Hsp_align_len, $Hsp_qseq, $Hsp_query_from, $Hsp_query_to, $Hsp_midline, $Hsp_hseq, $Hsp_hit_from, $Hsp_hit_to); ?></pre></td></tr>
+				<tr><td><pre id="algfmt"><?php fmtprint($Hsp_align_len, $Hsp_qseq, $Hsp_query_from, $Hsp_query_to, $Hsp_midline, $Hsp_hseq, $Hsp_hit_from, $Hsp_hit_to); ?></pre></td></tr>
 			</tbody>
 		</table>
 		</p>
@@ -258,6 +260,6 @@ foreach($xml->BlastOutput_iterations->Iteration as $itr) {
 <?php
 }
 ?>
-</kbd>
+</div>
 </body>
 </html>
