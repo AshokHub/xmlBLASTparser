@@ -1,0 +1,25 @@
+table#definition, table#iteration, table#hlist, table#hits, table#statistics { border-collapse: collapse; }
+table#definition { width: 500px; }
+table#definition td { border: 1px solid ForestGreen; padding: 2px; }
+table#definition td:nth-child(odd) { color: white; background: Green; }
+table#iteration, table#hlist, table#hits { width: 100%; }
+table#iteration th { color: white; background: OrangeRed; border: 1px solid Red; padding: 2px; text-align: center; }
+table#iteration td { border: 1px solid Red; padding: 2px; }
+table#iteration tr:nth-child(odd) { background: PapayaWhip; }
+table#hlist th { color: White; background: Orange; border: 1px solid Orange; padding: 2px; text-align: center; }
+table#hlist td { border: 1px solid DarkOrange; padding: 2px; }
+table#hlist tr:nth-child(odd) { background: Cornsilk; }
+table#hits th { color: White; background: GoldenRod; border: 1px solid GoldenRod; padding: 2px; text-align: center; }
+table#hits td { border: 1px solid GoldenRod; padding: 2px; }
+table#hits tr:nth-child(odd) { background: LightGoldenRodYellow; }
+table#statistics { width: 300px; }
+table#statistics td { border: 1px solid Coral; padding: 2px; }
+table#statistics td:nth-child(odd) { color: white; background: Chocolate; }
+#ops { padding: 0.1px 0 0.1px 0; font-family: "Lucida Console", Monaco, monospace; -ms-word-break: break-all; word-break: break-all; word-break: break-word; }
+#ilnk { text-decoration: none; }
+#rilnk { text-decoration: none; color: red; }
+#blout { font-family: monospace; }
+#algfmt { line-height: 95%; font-size: 12px; }
+#dsphide { max-width: 450px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+#evfix { min-width: 50px; text-align: center; }
+#idp, #qcvr, #tscr { min-width: 40px; text-align: center; }
