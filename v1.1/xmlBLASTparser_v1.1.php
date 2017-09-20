@@ -246,35 +246,37 @@ foreach($xml->BlastOutput_iterations->Iteration as $itr) {
 		$Hit_def = $algn->Hit_def;
 		$Hit_accession = $algn->Hit_accession;
 		$Hit_len = $algn->Hit_len;
-		$Hsp_num = $algn->Hit_hsps->Hsp->Hsp_num;
-		$Hsp_bit_score = $algn->Hit_hsps->Hsp->{'Hsp_bit-score'};
-		$Hsp_score = $algn->Hit_hsps->Hsp->Hsp_score;
-		$Hsp_evalue = $algn->Hit_hsps->Hsp->Hsp_evalue;
-		$Hsp_query_from = $algn->Hit_hsps->Hsp->{'Hsp_query-from'};
-		$Hsp_query_to = $algn->Hit_hsps->Hsp->{'Hsp_query-to'};
-		$Hsp_hit_from = $algn->Hit_hsps->Hsp->{'Hsp_hit-from'};
-		$Hsp_hit_to = $algn->Hit_hsps->Hsp->{'Hsp_hit-to'};
-		$Hsp_query_frame = $algn->Hit_hsps->Hsp->{'Hsp_query-frame'};
-		$Hsp_hit_frame = $algn->Hit_hsps->Hsp->{'Hsp_hit-frame'};
-		$Hsp_identity = $algn->Hit_hsps->Hsp->Hsp_identity;
-		$Hsp_positive = $algn->Hit_hsps->Hsp->Hsp_positive;
-		$Hsp_gaps = $algn->Hit_hsps->Hsp->Hsp_gaps;
-		$Hsp_align_len = $algn->Hit_hsps->Hsp->{'Hsp_align-len'};
-		$Hsp_qseq = $algn->Hit_hsps->Hsp->Hsp_qseq;
-		$Hsp_midline = $algn->Hit_hsps->Hsp->Hsp_midline;
-		$Hsp_hseq = $algn->Hit_hsps->Hsp->Hsp_hseq;
-		?>
-		<p id="ops">
-		<table id="hits" align="center">
-			<tbody>
-				<tr><th><?php print "Hit Number: " . $Hit_num . ", Accession Number: <span id='" . $Hit_accession . "'>" . $Hit_accession; ?></span></th></tr>
-				<tr><td><?php $sdef = def_split($Hit_id, $Hit_def); print annotate($sdef); ?></td></tr>
-				<tr><td><?php print "<b>Length</b> = ". $Hit_len . ", <b>Score</b> =  " . btscre($Hsp_bit_score) . " bits (" . $Hsp_score . "), <b>Expect</b> = " . evfmt($Hsp_evalue) . ",<br><b>Identities</b> = " . $Hsp_identity . "/" . $Hsp_align_len . " (" . round(($Hsp_identity/$Hsp_align_len)*100) . "%), <b>Positives</b> = " . $Hsp_positive . "/" . $Hsp_align_len . " (" . round(($Hsp_positive/$Hsp_align_len)*100) . "%), <b>Gaps</b> = ". $Hsp_gaps . "/" . $Hsp_align_len . " (" . round(($Hsp_gaps/$Hsp_align_len)*100) . "%)"; ?></td></tr>
-				<tr><td><pre id="algfmt"><?php fmtprint($Hsp_align_len, $Hsp_qseq, $Hsp_query_from, $Hsp_query_to, $Hsp_midline, $Hsp_hseq, $Hsp_hit_from, $Hsp_hit_to); ?></pre></td></tr>
-			</tbody>
-		</table>
-		</p>
-	<?php 
+		foreach($algn->Hit_hsps->Hsp as $ialgn) {
+			$Hsp_num = $ialgn->Hsp_num;
+			$Hsp_bit_score = $ialgn->{'Hsp_bit-score'};
+			$Hsp_score = $ialgn->Hsp_score;
+			$Hsp_evalue = $ialgn->Hsp_evalue;
+			$Hsp_query_from = $ialgn->{'Hsp_query-from'};
+			$Hsp_query_to = $ialgn->{'Hsp_query-to'};
+			$Hsp_hit_from = $ialgn->{'Hsp_hit-from'};
+			$Hsp_hit_to = $ialgn->{'Hsp_hit-to'};
+			$Hsp_query_frame = $ialgn->{'Hsp_query-frame'};
+			$Hsp_hit_frame = $ialgn->{'Hsp_hit-frame'};
+			$Hsp_identity = $ialgn->Hsp_identity;
+			$Hsp_positive = $ialgn->Hsp_positive;
+			$Hsp_gaps = $ialgn->Hsp_gaps;
+			$Hsp_align_len = $ialgn->{'Hsp_align-len'};
+			$Hsp_qseq = $ialgn->Hsp_qseq;
+			$Hsp_midline = $ialgn->Hsp_midline;
+			$Hsp_hseq = $ialgn->Hsp_hseq;
+			?>
+			<p id="ops">
+			<table id="hits" align="center">
+				<tbody>
+					<tr><th><?php print "Hit Number: " . $Hit_num . ", Accession Number: <span id='" . $Hit_accession . "'>" . $Hit_accession; ?></span></th></tr>
+					<tr><td><?php $sdef = def_split($Hit_id, $Hit_def); print annotate($sdef); ?></td></tr>
+					<tr><td><?php print "<b>Length</b> = ". $Hit_len . ", <b>Score</b> =  " . btscre($Hsp_bit_score) . " bits (" . $Hsp_score . "), <b>Expect</b> = " . evfmt($Hsp_evalue) . ",<br><b>Identities</b> = " . $Hsp_identity . "/" . $Hsp_align_len . " (" . round(($Hsp_identity/$Hsp_align_len)*100) . "%), <b>Positives</b> = " . $Hsp_positive . "/" . $Hsp_align_len . " (" . round(($Hsp_positive/$Hsp_align_len)*100) . "%), <b>Gaps</b> = ". $Hsp_gaps . "/" . $Hsp_align_len . " (" . round(($Hsp_gaps/$Hsp_align_len)*100) . "%)"; ?></td></tr>
+					<tr><td><pre id="algfmt"><?php fmtprint($Hsp_align_len, $Hsp_qseq, $Hsp_query_from, $Hsp_query_to, $Hsp_midline, $Hsp_hseq, $Hsp_hit_from, $Hsp_hit_to); ?></pre></td></tr>
+				</tbody>
+			</table>
+			</p>
+		<?php
+		}
 	}
 	?>		
 	<p id="ops">
