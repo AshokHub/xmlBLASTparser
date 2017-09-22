@@ -8,24 +8,25 @@
 <div id="blout">
 <?php
 $xml = simplexml_load_file("test.xml") or die("Error: Cannot able to create object");
+$enid = 0;
 function def_split($str1, $str2) {
 	$str = $str1 . " " . $str2;
 	$out = "";
-	$nid = preg_match_all('/gi\|\K[^\|]*(?=\|)/', $str1, $id);
-	$enid = base64_encode($id[0][0]);
+	global $enid;
 	$str = preg_replace("/\>/", "&gt;", $str);
 	$str = preg_replace("/ \&gt\;/", "<br/>()", $str);
 	$strln = explode('()', $str);
 	$out .= $strln[0];
 	$n = count($strln);
 	if ($n > 1) {
-		$out .= "<div id='lshow". $enid . "'><a id='rilnk' href='javascript:void(0)' onclick=\"document.getElementById('". $enid . "').style.display = 'block'; document.getElementById('lhide". $enid . "').style.display = 'block'; document.getElementById('lshow". $enid . "').style.display = 'none';\">See " . ($n-1) . " more title(s)</a></div>";
-		$out .= "<div style='display: none;' id='lhide". $enid . "'><a id='rilnk' href='javascript:void(0)' onclick=\"document.getElementById('". $enid . "').style.display = 'none'; document.getElementById('lshow". $enid . "').style.display = 'block'; document.getElementById('lhide". $enid . "').style.display = 'none';\">Hide " . ($n-1) . " title(s) below</a></div>";
-		$out .= "<div id='". $enid . "' style='display: none;'>";
+		$out .= "<div id='lshow". $enid . "'><a id='rilnk' href='javascript:void(0)' onclick=\"document.getElementById('alns". $enid . "').style.display = 'block'; document.getElementById('lhide". $enid . "').style.display = 'block'; document.getElementById('lshow". $enid . "').style.display = 'none';\">See " . ($n-1) . " more title(s)</a></div>";
+		$out .= "<div style='display: none;' id='lhide". $enid . "'><a id='rilnk' href='javascript:void(0)' onclick=\"document.getElementById('alns". $enid . "').style.display = 'none'; document.getElementById('lshow". $enid . "').style.display = 'block'; document.getElementById('lhide". $enid . "').style.display = 'none';\">Hide " . ($n-1) . " title(s) below</a></div>";
+		$out .= "<div id='alns". $enid . "' style='display: none;'>";
 		for ($i = 1; $i < $n; $i++) {
 			$out .= $strln[$i];
 		}
 		$out .= "</div>";
+		$enid++;
 	}
 	return $out;
 }
