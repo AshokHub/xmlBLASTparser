@@ -187,6 +187,8 @@ $xml = file_get_contents("out.xml");
 # Support
 Please feel free to sent your queries, suggestions and/or comments related to [xmlBLASTparser](https://github.com/AshokHub/xmlBLASTparser) program to [ashok.bioinformatics@gmail.com](ashok.bioinformatics@gmail.com) or [ashok@biogem.org](ashok@biogem.org).
 
-
 # License
 [xmlBLASTparser](https://github.com/AshokHub/xmlBLASTparser) is made available under version 3 of the GNU Lesser General Public License.
+
+# Citation
+Ashok Kumar, T., and Rajagopal, B. (2017). xmlBLASTparser v1.1 — a PHP based NCBI BLAST XML output parser. [*International Journal of Advanced Research in Computer Science*](http://www.ijarcs.info). 8(8): 230-232. [[Abstract]](http://www.ijarcs.info/index.php/Ijarcs/article/view/4648) [[PDF]](http://www.ijarcs.info/index.php/Ijarcs/article/view/4648/4158)
